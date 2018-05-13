@@ -29,6 +29,7 @@ SOURCES += main.cpp\
     rpgobj.cpp \
     player.cpp \
     world.cpp \
+    monster.cpp
 
 HEADERS  += \
     mw1.h \
@@ -36,6 +37,7 @@ HEADERS  += \
     rpgobj.h \
     player.h \
     world.h \
+    monster.h
 
 FORMS    += \
     mw1.ui

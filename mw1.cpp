@@ -14,7 +14,7 @@ MW1::MW1(QWidget *parent) :
     ui->setupUi(this);
 
     //init game world
-    _game.initWorld("/Users/air/Desktop/code");//TODO 应该是输入有效的地图文件
+    _game.initWorld("/Users/air/Desktop/RPG");//TODO 应该是输入有效的地图文件
 }
 
 MW1::~MW1()
@@ -35,21 +35,22 @@ void MW1::keyPressEvent(QKeyEvent *e)
 {
     //direction =WSADfor 上下左右
     //操控player运动
+
     if(e->key() == Qt::Key_A)
     {
-        this->_game.handlePlayerMove(3,1);
+        this->_game.handlePlayerMove(-1,0);
     }
     else if(e->key() == Qt::Key_D)
     {
-        this->_game.handlePlayerMove(4,1);
+        this->_game.handlePlayerMove(1,0);
     }
     else if(e->key() == Qt::Key_W)
     {
-        this->_game.handlePlayerMove(1,1);
+        this->_game.handlePlayerMove(0,-1);
     }
     else if(e->key() == Qt::Key_S)
     {
-         this->_game.handlePlayerMove(2,1);
+         this->_game.handlePlayerMove(0,1);
     }
     this->repaint();
 }
