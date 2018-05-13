@@ -1,16 +1,13 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include "rpgobj.h"
+#include"rpgobj.h"
 
 class Player: public RPGObj
 {
 public:
     Player(){}
     ~Player(){}
-    void move(int direction, int steps=1);
-        //direction =1,2,3,4 for 上下左右
-public:
-    static bool fruit_flag;
+    void move(int _x, int _y);
 };
 
 #endif // PLAYER_H

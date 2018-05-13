@@ -19,9 +19,39 @@ void RPGObj::initObj(string type)
         this->_eatable = false;
         this->state = true;
     }
-    else if (type.compare("fruit")==0){
-        this->_coverable = false;
+    else if (type.compare("vegetable")==0){
+        this->_coverable = true;
         this->_eatable = true;
+        this->state = true;
+    }
+    else if (type.compare("flower")==0){
+        this->_coverable = true;
+        this->_eatable = false;
+        this->state = true;
+    }
+    else if (type.compare("tree")==0){
+        this->_coverable = false;
+        this->_eatable = false;
+        this->state = true;
+    }
+    else if (type.compare("monster")==0){
+        this->_coverable = false;
+        this->_eatable = false;
+        this->state = true;
+    }
+    else if (type.compare("cactus")==0){
+        this->_coverable = false;
+        this->_eatable = false;
+        this->state = true;
+    }
+    else if (type.compare("apple")==0){
+        this->_coverable = true;
+        this->_eatable = true;
+        this->state = true;
+    }
+    else if (type.compare("grass")==0){
+        this->_coverable = true;
+        this->_eatable = false;
         this->state = true;
     }
     else{
@@ -32,7 +62,7 @@ void RPGObj::initObj(string type)
 
     this->_icon = ICON::findICON(type);
     QImage all;
-    all.load("/Users/air/Desktop/code/TileB.png");
+    all.load("/Users/air/Desktop/RPG/TileB.png");
     this->_pic = all.copy(QRect(_icon.getSrcX()*ICON::GRID_SIZE, _icon.getSrcY()*ICON::GRID_SIZE, _icon.getWidth()*ICON::GRID_SIZE, _icon.getHeight()*ICON::GRID_SIZE));
 }
 
