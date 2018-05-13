@@ -9,7 +9,7 @@ class ICON
 {
 public:
     static int GRID_SIZE;//游戏中一格，相当于图片中多少像素
-    static map<string,ICON> GAME_ICON_SET;
+    static map<string,ICON> GAME_ICON_SET;//cyh:map 映射 类似于字典，在map中查找元素能确定存在性同时得到相应的数据
         //确定各类物体子素材图片的位置，高、宽等数据
     static ICON findICON(string type);
         //根据物体类型名找到图标
